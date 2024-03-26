@@ -9,6 +9,7 @@ namespace Animals
     class Animal
     {
         public string Name { get; set; }
+        public int Age {  get; set; }
 
         public void Moove()
         {
@@ -20,9 +21,10 @@ namespace Animals
 
         }
 
-        public Animal(string newName)
+        public Animal(string newName, int newAge)
         {
             this.Name = newName;
+            this.Age = newAge;
         }
         
         public Animal()
