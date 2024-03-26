@@ -1,21 +1,19 @@
-﻿using Animals;
-
+﻿
 class Program
 {
     static void Main(string[] args)
     {
+        Console.WriteLine("entre le nom d'un griffon");
+        string griffinName = Console.ReadLine();
+        Console.WriteLine("entre le nom d'un dragon");
+        string dragonName = Console.ReadLine();
 
+        Griffin griffin = new Griffin(griffinName);
+        Dragon dragon = new Dragon(dragonName);
 
-        Animal dinosaure = new Animal("Tricératops", 15000000);
-
-        string a = dinosaure.Name;
-        int b = dinosaure.Age;
-
-        Console.WriteLine($"The animal's name is {a}.\n");
-        Console.WriteLine($"{a} is a big dinosaure\n");
-        Console.WriteLine($"{a} is {b} years old\n");
-        dinosaure.Moove();
-        dinosaure.Sleep();
-
+        dragon.Move();
+        dragon.Sleep();
+        griffin.Move();
+        griffin.Sleep();
     }
 }
