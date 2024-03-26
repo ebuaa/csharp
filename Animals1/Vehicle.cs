@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animals1
 {
-    internal class Vehicle
+    internal class Vehicle : IPilotage
     {
         public void Moove()
         {
