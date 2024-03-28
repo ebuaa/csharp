@@ -8,7 +8,7 @@ namespace Animals1
 {
     internal interface IFly
     {
-        public void Moove();
+        public void Fly();
     }
     
 }

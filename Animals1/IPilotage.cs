@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animals1
 {
-    internal interface IPilotage
+    public interface IPilotage
     {
         public void Moove();
 

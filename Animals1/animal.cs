@@ -6,11 +6,14 @@ using System.Xml.Linq;
 /// </summary>
 public abstract class Animal
 {
-    private string _name;
+    public string Name { get; protected set; }
+    public string Rarity { get; set; }
+    public virtual void move() { }
 
+    public virtual void sleep() { }
 
-    public string Name { get { return _name; } protected set { _name = value; } }
-
-    public abstract void Move();
-    public abstract void Sleep();
+    public void display()
+    {
+        Console.WriteLine("Name: " + Name + " Rarity: " + Rarity);
+    }
 }

@@ -1,21 +1,35 @@
-﻿using System.Xml.Linq;
+﻿using System;
+using System.Xml.Linq;
+using Animals1;
 
-public class Griffin : Animal
+/// <summary>
+/// Summary description for Class1
+/// </summary>
+public class Griffin : Animal, IFly
 {
     Griffin()
     {
-        Name = "Random griffin";
+        this.Name = "griffin";
+    }
+    public Griffin(string name, string rarity)
+    {
+        this.Name = name;
+        this.Rarity = rarity;
     }
     public Griffin(string name)
     {
-        Name = name;
+        this.Name = name;
     }
-    public override void Move()
+    public override void move()
     {
-        Console.WriteLine("*flap flap, bruits de " + this.Name + " le griffin qui bouge*");
+        Console.WriteLine(this.Name + " the griffin is moving");
     }
-    public override void Sleep()
+    public new void sleep()
     {
-        Console.WriteLine("*" + this.Name + " le griffin dort fort et ronfle sa race*");
+        Console.WriteLine(this.Name + " the griffin is sleeping");
+    }
+    public void Fly()
+    {
+        Console.WriteLine(this.Name + " the griffin is flying");
     }
 }

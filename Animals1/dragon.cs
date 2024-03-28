@@ -1,26 +1,42 @@
-﻿using Animals1;
+﻿using System;
+using Animals1;
 
-public class Dragon : Animal , IPilotage
+public class Dragon : Animal, IPilotage, IFly
 {
-    public void Moove()
+    Dragon()
     {
-        Console.WriteLine("Dragon keep mooving \n");    
+        this.Name = "dragon";
+    }
+    public Dragon(string name, string rarity)
+    {
+        this.Name = name;
+        this.Rarity = rarity;
     }
 
-    public Dragon()
-    {
-        this.Name = "Random griffin";
-    }
     public Dragon(string name)
     {
         this.Name = name;
     }
-    public override void Move()
+    public override void move()
     {
-        Console.WriteLine("*flap flap, bruits du gros " + this.Name + " le dragon qui bouge*");
+        Console.WriteLine(this.Name + " le dragon bouge");
     }
-    public override void Sleep()
+    public void moove()
     {
-        Console.WriteLine("*" + this.Name + " le dragon dort*");
+        Console.WriteLine(this.Name + " le dragon bouge mais en pilotant");
+    }
+    public override void sleep()
+    {
+        Console.WriteLine(this.Name + " le dragon dort");
+    }
+
+    public void Fly()
+    {
+        Console.WriteLine(this.Name + " le dragon vole");
+    }
+
+    public void Moove()
+    {
+        throw new NotImplementedException();
     }
 }
